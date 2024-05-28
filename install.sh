@@ -5,6 +5,9 @@ pip install python-uinput --break-system-packages
 
 install main.py /usr/libexec/chuwi_tabletmoded
 
+modprobe uinput
+echo "uinput" > /etc/modules-load.d/uinput
+
 echo "[Unit]
 Description=Generate XW_TABLET_MODE signal
 

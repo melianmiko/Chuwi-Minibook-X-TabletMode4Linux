@@ -29,5 +29,5 @@ with uinput.Device([TOGGLE_TABLET_MODE]) as device:
         val = 1 if is_tablet() else 0
         if val != last:
             device.emit(TOGGLE_TABLET_MODE, val)
-        time.sleep(0.5)
+        time.sleep(2)
 
