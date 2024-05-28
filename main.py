@@ -13,6 +13,9 @@ def is_tablet():
         v2 = int(f.read())
     return abs(v2 - v1) < 100
 
+# Prevent misselect of accelerometer by iio-proxy
+time.sleep(15)
+
 # Enable 2nd accelerometer
 try:
     with open("/sys/bus/i2c/devices/i2c-0/new_device", "w") as f:
